@@ -8,6 +8,8 @@ services:
     restart: always
     ports:
       - "8000:8000"
+    environment:
+      - NEW_RELIC_CONFIG_FILE=/code/newrelic.ini
     volumes:
       - type: bind
         source: .

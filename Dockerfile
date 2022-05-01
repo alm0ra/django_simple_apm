@@ -18,7 +18,9 @@ RUN rm -rf .git
 WORKDIR /code
 
 RUN mkdir logs
-RUN NEW_RELIC_CONFIG_FILE=newrelic.ini
+ENV NEW_RELIC_CONFIG_FILE=/code/newrelic.ini \
+    NEW_RELIC_DISTRIBUTED_TRACING_ENABLED=true
+    
 RUN export NEW_RELIC_CONFIG_FILE
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
