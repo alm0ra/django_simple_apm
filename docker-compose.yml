@@ -1,6 +1,6 @@
 version: "3.3"
 services:
-  adsadasd:
+  admin_panel:
     build:
       context: .
       dockerfile: Dockerfile
@@ -14,9 +14,8 @@ services:
       - type: bind
         source: .
         target: /code
-    networks:
-      - host
 
-networks:
-  host:
-    external: true
+networks: 
+  default: 
+    external: 
+      name: host
