@@ -14,7 +14,9 @@ services:
       - type: bind
         source: .
         target: /code
-
+    networks:
+      - host
+      
 networks:
   app-network:
     external: true
