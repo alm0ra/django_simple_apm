@@ -19,6 +19,7 @@ WORKDIR /code
 
 RUN mkdir logs
 RUN NEW_RELIC_CONFIG_FILE=newrelic.ini
+RUN export NEW_RELIC_CONFIG_FILE
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 CMD ["/usr/bin/supervisord"]
