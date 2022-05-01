@@ -15,7 +15,3 @@ services:
         source: .
         target: /code
 
-networks: 
-  default: 
-    external: 
-      name: host
