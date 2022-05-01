@@ -1,6 +1,6 @@
 version: "3.3"
 services:
-  django_simple_apm:
+  adsadasd:
     build:
       context: .
       dockerfile: Dockerfile
@@ -16,7 +16,7 @@ services:
         target: /code
     networks:
       - host
-      
+
 networks:
   host:
     external: true
