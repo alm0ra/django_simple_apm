@@ -1,6 +1,6 @@
 version: "3.3"
 services:
-  admin_panel:
+  django_simple_apm:
     build:
       context: .
       dockerfile: Dockerfile
@@ -16,7 +16,3 @@ services:
         target: /code
     networks:
       - host
-      
-networks:
-  app-network:
-    external: true
